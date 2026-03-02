@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-right">سِجل الحضور</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let month of attendanceByMonth" class="month-section">
+    <h2 class="month-title">{{ getMonthName(month.month) }}</h2>
+
+    <div *ngFor="let day of month.days" class="day-section">
+      <div class="day-header" (click)="toggleDay(day)">
+        <ion-icon [name]="day.expanded ? 'chevron-up' : 'chevron-down'" class="chevron"></ion-icon>
+        <span class="day-date">{{ formatDate(day.date) }}</span>
+        <ion-icon name="calendar" class="calendar-icon"></ion-icon>
+      </div>
+
+      <div class="day-records" *ngIf="day.expanded">
+        <div class="record-item" *ngFor="let record of day.records">
+          <span class="record-time">{{ formatTime(record.checkInTime) }}</span>
+          <ion-icon name="time-outline" class="time-icon"></ion-icon>
+          <span class="record-name">{{ record.personName }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="attendanceByMonth.length === 0" class="empty-state">
+    <p>لا يوجد سجلات حضور</p>
+  </div>
+</ion-content>

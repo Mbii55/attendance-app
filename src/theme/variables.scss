@@ -1,0 +1,25 @@
+// For information on how to create your own theme, please refer to:
+// https://ionicframework.com/docs/theming/
+:root {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+}
+
+body {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+}
+
+ion-app {
+  max-width: 430px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --ion-background-color: #ffffff;
+    --ion-text-color: #000000;
+  }
+}

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-right">تسجيل الحضور</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="list-section">
+    <h2>قائمة الأشخاص</h2>
+
+    <div 
+      class="person-item" 
+      *ngFor="let person of persons"
+      [class.checked-in]="hasCheckedIn(person.id)"
+      (click)="onPersonClick(person)"
+    >
+      <ion-icon name="person-circle" class="person-icon"></ion-icon>
+      <span class="person-name">{{ person.firstName }} {{ person.lastName }}</span>
+      <ion-icon 
+        name="finger-print" 
+        class="fingerprint-icon"
+        [class.active]="hasCheckedIn(person.id)"
+      ></ion-icon>
+    </div>
+
+    <div *ngIf="persons.length === 0" class="empty-state">
+      <p>لا يوجد أشخاص مسجلين</p>
+    </div>
+  </div>
+</ion-content>

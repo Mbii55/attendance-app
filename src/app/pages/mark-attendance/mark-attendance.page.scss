@@ -1,0 +1,63 @@
+ion-content {
+  --background: #f5f5f5;
+}
+
+.header-icon {
+  font-size: 28px;
+  margin-left: 16px;
+}
+
+.list-section {
+  padding: 20px;
+
+  h2 {
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #11335f;
+  }
+
+  .person-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 10px 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &.checked-in {
+      background: #f0f8f0;
+      border-color: #4caf50;
+    }
+
+    .fingerprint-icon {
+      font-size: 36px;
+      color: #999;
+
+      &.active {
+        color: #4caf50;
+      }
+    }
+
+    .person-name {
+      flex: 1;
+      font-size: 16px;
+      color: #1a4a8a;
+      padding: 0 12px;
+    }
+
+    .person-icon {
+      font-size: 44px;
+      color: #3880ff;
+    }
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}

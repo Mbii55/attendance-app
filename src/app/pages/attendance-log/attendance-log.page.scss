@@ -1,0 +1,93 @@
+ion-content {
+  --background: #f5f5f5;
+}
+
+.header-icon {
+  font-size: 28px;
+  margin-left: 16px;
+}
+
+.month-section {
+  padding: 16px;
+
+  .month-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #11335f;
+    margin: 0 0 16px 0;
+  }
+}
+
+.day-section {
+  margin-bottom: 12px;
+
+  .day-header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px 16px;
+    cursor: pointer;
+
+    .calendar-icon {
+      font-size: 24px;
+      color: #666;
+    }
+
+    .day-date {
+      flex: 1;
+      font-size: 16px;
+      color: #333;
+      padding: 0 12px;
+    }
+
+    .chevron {
+      font-size: 20px;
+      color: #666;
+    }
+  }
+
+  .day-records {
+    background: #2d3436;
+    border-radius: 0 0 8px 8px;
+    margin-top: -4px;
+    padding: 8px 0;
+
+    .record-item {
+      display: flex;
+      direction: ltr;
+      align-items: center;
+      padding: 12px 16px;
+      border-bottom: 1px solid #444;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .record-time {
+        font-size: 14px;
+        color: #fff;
+      }
+
+      .time-icon {
+        font-size: 20px;
+        color: #fff;
+        margin: 0 12px;
+      }
+
+      .record-name {
+        flex: 1;
+        text-align: right;
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
