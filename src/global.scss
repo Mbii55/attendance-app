@@ -98,10 +98,6 @@ html, body {
   height: 100%;
 }
 
-ion-tab-bar {
-  padding-bottom: env(safe-area-inset-bottom);
-}
-
 ion-content {
   --padding-bottom: env(safe-area-inset-bottom);
 }
